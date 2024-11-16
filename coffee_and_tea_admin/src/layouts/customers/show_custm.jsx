@@ -3,7 +3,7 @@ import { useState } from 'react';
 import DataTable from 'react-data-table-component';
 import CustomerInfo from './custm_info';
 
-const ShowCutomers = () => {
+const ShowCustomers = () => {
   const [search, setSearch] = useState('');
 
   const handleFilter = (event) => {
@@ -98,7 +98,7 @@ const ShowCutomers = () => {
             <div className='-header-lef'>
               <input
                 type="text"
-                placeholder="Tìm kiếm đơn hàng"
+                placeholder="Tìm kiếm khách hàng"
                 value={search}
                 onChange={handleFilter}
                 style={{
@@ -139,4 +139,4 @@ const ShowCutomers = () => {
   );
 };
 
-export default ShowCutomers;
+export default ShowCustomers;

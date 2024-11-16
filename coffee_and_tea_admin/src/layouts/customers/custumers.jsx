@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import ShowCutomers from "./show_custm";
+import ShowCustomers from "./show_custm";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 
 export default function Custumers () {
@@ -11,7 +11,7 @@ export default function Custumers () {
                 <h2 className="products-title">Khách hàng</h2>
             </div>
 
-            <ShowCutomers/>
+            <ShowCustomers/>
         </div>
     </>
     )

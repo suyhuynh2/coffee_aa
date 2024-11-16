@@ -1,9 +1,13 @@
 /* eslint-disable react/prop-types */
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUser, faLock, faCoffee } from '@fortawesome/free-solid-svg-icons';
+import { faUser, faLock, 
+    // faCoffee 
+} from '@fortawesome/free-solid-svg-icons';
 import { faFacebook, faGoogle, faTwitter} from '@fortawesome/free-brands-svg-icons';
 
-export default function Login({setForm}) {
+export default function Login(
+        {setForm}
+    ) {
     const handleSetForm = (item) => {
         setForm(item);
     }
@@ -12,7 +16,7 @@ export default function Login({setForm}) {
         <div className="wrap-form-login">
             <div className="login-box">
                 <h1>Đăng nhập
-                    <FontAwesomeIcon icon={faCoffee} />
+                    {/* <FontAwesomeIcon icon={faCoffee} /> */}
                 </h1>
 
                 <div className="input-box">
@@ -26,7 +30,9 @@ export default function Login({setForm}) {
                         <input type="password" placeholder="Mật khẩu" />
                     </label>
 
-                    <a href='#' onClick={() => handleSetForm('forgot_password')}><p>Quên mật khẩu?</p></a>
+                    <a href='#' 
+                        onClick={() => handleSetForm('forgot_password')}
+                        ><p>Quên mật khẩu?</p></a>
                 </div>
 
                 <button className='login-box-btn'>Đăng nhập</button>

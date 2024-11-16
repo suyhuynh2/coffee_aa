@@ -10,7 +10,7 @@ import Login from "../layouts/login";
 import Register from "../layouts/register";
 import ForgotPassword from "../layouts/forgot_password";
 
-export default function usePageSwitch() {
+export function usePageSwitch() {
     const [activePage, setActivePage] = useState('dashboard');
 
     const renderPage = () => {

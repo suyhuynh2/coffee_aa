@@ -37,10 +37,25 @@ export default function OrderInfo({isOpen, isBackPrdList}) {
                     <p>ID đơn hàng</p>
                     <input type="text" disabled/>
                 </label>
+                
+                <label className="value_box" htmlFor="">
+                    <p>ID khách hàng</p>
+                    <input type="text" disabled/>
+                </label>
 
                 <label className="value_box" htmlFor="">
                     <p>Tên khách hàng</p>
                     <input type="text" disabled={!isUnlockInput} />
+                </label>
+
+                <label className="value_box" htmlFor="">
+                    <p>Địa chỉ</p>
+                    <input type="text" disabled={!isUnlockInput} />
+                </label>
+
+                <label className="value_box" htmlFor="">
+                    <p>Số điện thoại</p>
+                    <input type="number" disabled={!isUnlockInput} />
                 </label>
 
                 <label className="value_box" htmlFor="">

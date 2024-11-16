@@ -3,9 +3,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faLock, faEnvelope, faHeart, faCoffee, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { faFacebook, faGoogle, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { useState } from 'react';
-import { RegisterAPI } from '../api/auth';
+import { RegisterAPI } from '../app/api/auth';
 
-export default function Register({setForm}) {
+export default function Register(
+    {setForm}
+) {
     const handleSetForm = (item) => {
         setForm(item);
     }
@@ -65,7 +67,9 @@ export default function Register({setForm}) {
                     <hr />
                 </div>
 
-                <button className='login-box-btn' onClick={handleRegister}>Đăng ký tài khoản</button>
+                <button className='login-box-btn' 
+                onClick={handleRegister}
+                >Đăng ký tài khoản</button>
 
                 <div className="label-login">
                     <p>Đã có tài khoản!!...</p>

@@ -204,7 +204,7 @@ const ShowOrders = () => {
             <div className='-header-lef'>
               <input
                 type="text"
-                placeholder="Tìm kiếm đơn hàng"
+                placeholder="Tìm kiếm khách hàng"
                 value={search}
                 onChange={handleFilter}
                 style={{

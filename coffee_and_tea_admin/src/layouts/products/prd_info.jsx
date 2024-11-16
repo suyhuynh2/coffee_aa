@@ -64,6 +64,11 @@ export default function ProductInfo({isOpen, isBackPrdList}) {
                 </label>
 
                 <label htmlFor="" className="value_box">
+                    <p>Số lượng</p>
+                    <input type="number" min={0}  disabled={!isUnlockInput}/>
+                </label>
+
+                <label htmlFor="" className="value_box">
                     <p>Hình ảnh</p>
                     <input type="file" name="" id="" ref={fileInputRef}  disabled={!isUnlockInput}/>
                     <div className="-upload-file" onClick={handleUploadClick} >
