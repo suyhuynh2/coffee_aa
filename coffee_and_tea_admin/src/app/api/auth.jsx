@@ -5,7 +5,7 @@ export const RegisterAPI = async (name, email, password, re_password, phone, set
     try {
         const data = [name, email, password, re_password, phone];
         if (validInfoAdmin(data)) {    
-            const response = await axios.post('hhttp://127.0.0.1:8000/api/register', {
+            const response = await axios.post('http://127.0.0.1:8000/api/register', {
                 name: name,
                 email: email,
                 password: password,
@@ -18,7 +18,7 @@ export const RegisterAPI = async (name, email, password, re_password, phone, set
             });
 
             if (response.status === 201) {
-                alert(response.data);
+                alert("Đăng ký thành công");
                 setForm('login');
             }
         }

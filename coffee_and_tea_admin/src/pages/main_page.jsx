@@ -3,9 +3,9 @@ import { useState } from 'react';
 
 import Header from '../layouts/header';
 import Sidebar from '../layouts/sidebar';
-import { usePageSwitch } from '../hooks/usePageSwitch';
-
-// , { useChangeLoginPage } 
+import { usePageSwitch, 
+            useChangeLoginPage 
+        } from '../hooks/usePageSwitch';
 
 export default function MainLayout() {
 
@@ -14,22 +14,20 @@ export default function MainLayout() {
         setIsOpenSidebar(prevState => !prevState)
     }
     const { setActivePage, renderPage } = usePageSwitch();
-    // const { setForm, renderFrom } = useChangeLoginPage();
+    const { setForm, renderFrom } = useChangeLoginPage();
 
     return(
         <>
         <div className='wrap-home-page'>
 
             {/* form */}
-            {/* {renderFrom({setForm})} */}
+            {renderFrom({setForm})}
 
             {/* title */}
             <Helmet><title>Admin</title></Helmet>
 
             {/* sidebar */}
-            <Sidebar isOpen={isOpenSidebar} hidden={toggleSidebar} 
-            setActivePage={setActivePage}
-            />
+            <Sidebar isOpen={isOpenSidebar} hidden={toggleSidebar} setActivePage={setActivePage} />
 
             {/* WORK SPACE */}
             <div className='wrap-work-space'>

@@ -18,6 +18,10 @@ export default function validInfoAdmin(data) {
         return false;
     }
 
+    if (data[2] <= 8 && data[3] <=8 ) {
+        alert('Mật khẩu có ít nhất 8 ký tự');
+    }
+
     if (!isValidPhone(data[4])) {
         alert('Số điện thoại không hợp lệ');
         return false;
